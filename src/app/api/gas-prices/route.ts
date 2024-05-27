@@ -20,6 +20,13 @@ export async function GET() {
   try {
     const response = await fetch(
       `https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=${apiKey}`,
+      {
+        headers: {
+          "Cache-Control": "no-cache, no-store, must-revalidate",
+          Pragma: "no-cache",
+          Expires: "0",
+        },
+      },
     );
     if (!response.ok) {
       throw new Error("error fetching, please retry");
