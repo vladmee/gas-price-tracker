@@ -7,6 +7,7 @@ Technologies used:
 - [Tailwind CSS](https://tailwindcss.com)
 - [Zustand](https://github.com/pmndrs/zustand)
 - [React Query](https://tanstack.com/query/latest/docs/framework/react/overview)
+- [Shadcn](https://ui.shadcn.com/)
 
 ## How do I set up this?
 
