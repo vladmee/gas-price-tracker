@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import useGasPrices, { type GasPrices } from "../store/useGasPrices";
 import { type GasPricesApiResponse } from "~/app/api/gas-prices/route";
 
+export const dynamic = "force-dynamic";
+
 const fetchGasPrices = async (): Promise<GasPrices> => {
   const response = await fetch("/api/gas-prices", {
     headers: {

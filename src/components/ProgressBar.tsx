@@ -7,6 +7,8 @@ interface ProgressBarProps {
   lastUpdatedAt: Date | null;
 }
 
+export const dynamic = "force-dynamic";
+
 export function ProgressBar({ lastUpdatedAt }: ProgressBarProps) {
   const [progress, setProgress] = useState(0);
 
