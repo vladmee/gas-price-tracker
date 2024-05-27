@@ -24,7 +24,8 @@ export async function GET() {
     if (!response.ok) {
       throw new Error("error fetching, please retry");
     }
-    const data: GasPricesApiResponse = await response.json();
+    const data: GasPricesApiResponse =
+      (await response.json()) as GasPricesApiResponse;
     return NextResponse.json(data);
   } catch (error) {
     return NextResponse.json(

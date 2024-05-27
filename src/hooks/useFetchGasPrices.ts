@@ -12,7 +12,8 @@ const fetchGasPrices = async (): Promise<GasPrices> => {
   if (!response.ok) {
     throw new Error("could not reach the api");
   }
-  const data: GasPricesApiResponse = await response.json();
+  const data: GasPricesApiResponse =
+    (await response.json()) as GasPricesApiResponse;
   return data.result;
 };
 
