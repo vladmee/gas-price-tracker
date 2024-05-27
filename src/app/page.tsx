@@ -5,6 +5,8 @@ import { ProgressBar } from "~/components/ProgressBar";
 import useFetchGasPrices from "~/hooks/useFetchGasPrices";
 import useGasPrices from "~/store/useGasPrices";
 
+export const dynamic = "force-dynamic";
+
 export default function HomePage() {
   const { isSuccess } = useFetchGasPrices();
   const gasPrices = useGasPrices((state) => state.data);
