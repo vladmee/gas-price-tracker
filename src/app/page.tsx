@@ -12,6 +12,8 @@ export default function HomePage() {
   const gasPrices = useGasPrices((state) => state.data);
   const lastUpdatedAt = useGasPrices((state) => state.lastUpdatedAt);
 
+  console.log({ lastUpdatedAt });
+
   return (
     <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-8">
       <div className="w-[60%]">
