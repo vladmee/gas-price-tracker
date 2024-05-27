@@ -25,13 +25,16 @@ const useFetchGasPrices = () => {
     gcTime: 0,
     staleTime: 0,
     refetchInterval: 10000, // fetch every 10 sec
+    refetchOnWindowFocus: true,
   });
 
   useEffect(() => {
     if (isSuccess && data) {
-      setData(data);
+      setData(data, new Date());
     }
   }, [isSuccess, data, setData]);
+
+  return { isSuccess };
 };
 
 export default useFetchGasPrices;

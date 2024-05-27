@@ -11,7 +11,9 @@ Technologies used:
 
 ## How do I set up this?
 
-`pnpm install`
+- `pnpm install`
+- `pnpm run dev` for development
+- `pnpm run build` & `pnpm run start` for production
 
 ## Where can I see it live?
 

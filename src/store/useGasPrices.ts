@@ -11,12 +11,14 @@ export interface GasPrices {
 
 export interface GasPricesState {
   data: GasPrices | null;
-  setData: (data: GasPrices) => void;
+  lastUpdatedAt: Date | null;
+  setData: (data: GasPrices, lastUpdatedAt: Date) => void;
 }
 
 const useGasPrices = create<GasPricesState>((set) => ({
   data: null,
-  setData: (data: GasPrices) => set({ data }),
+  lastUpdatedAt: null,
+  setData: (data, lastUpdatedAt) => set({ data, lastUpdatedAt }),
 }));
 
 export default useGasPrices;
