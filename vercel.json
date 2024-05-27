@@ -1,0 +1,8 @@
+{
+  "build": {
+    "env": {
+      "PNPM_HOME": ".pnpm"
+    },
+    "packageManager": "pnpm@9.0.6"
+  }
+}
