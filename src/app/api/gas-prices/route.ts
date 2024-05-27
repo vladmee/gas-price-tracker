@@ -7,6 +7,8 @@ export interface GasPricesApiResponse {
   result: GasPrices;
 }
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   const apiKey = process.env.ETHERSCAN_API_KEY;
 
